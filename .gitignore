@@ -22,3 +22,42 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# User-specific files
+*.swp
+*.swo
+*.tmp
+*.log
+
+# Build output directories
+/out/
+target/
+build/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+/logs/
+dependency-reduced-pom.xml
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Other IDEs (optional, just in case project is opened in them)
+.vscode/
+*.classpath
+*.project
+.settings/
+
+
