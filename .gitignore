@@ -60,4 +60,10 @@ dependency-reduced-pom.xml
 *.project
 .settings/
 
+#MVN settings
+*.mvn/
+*mvnw.cmd
+*mvnw
+*.gitattributes
+
 
