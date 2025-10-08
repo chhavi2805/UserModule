@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n"/>
+        </Console>
+
+        <!-- Rolling File Appender -->
+        <RollingFile name="FileLogger"
+                     fileName="logs/app.log"
+                     filePattern="logs/app-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1} - %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Application package logger -->
+        <Logger name="com.example.usermodule" level="warn" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+
+        <!-- Root logger -->
+        <Root level="error">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
